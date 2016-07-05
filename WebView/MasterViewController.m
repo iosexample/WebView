@@ -61,7 +61,7 @@
         DetailWKWebViewController *controller = [[DetailWKWebViewController alloc] init];
         UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:controller];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-        //controller.navigationItem.leftItemsSupplementBackButton = YES;
+        controller.navigationItem.leftItemsSupplementBackButton = YES;
         [self.splitViewController showDetailViewController:navc sender:self];
     }
 }
