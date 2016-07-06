@@ -1,4 +1,8 @@
 language: objective-c
-xcode_project: WebView.xcodeproj
+# xcode_project: WebView.xcodeproj
 osx_image: xcode7.3
-xcode_scheme: WebView
+# xcode_scheme: WebView
+before_install:
+    - brew update
+    - brew install xctool
+script: xctool -project WebView.xcodeproj -scheme WebView test -test-sdk iphonesimulator
